@@ -1,0 +1,48 @@
+/* ==========================================================
+   MODAL e inscripción multipaso
+   ========================================================== */
+.modal {
+  position: fixed; inset: 0; z-index: 300; display: grid; place-items: center;
+  padding: 1rem; background: rgba(4, 6, 12, 0.82); backdrop-filter: blur(6px);
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn { from { opacity: 0; } }
+.modal__dialog {
+  width: min(100%, 760px); max-height: min(92vh, 900px); overflow-y: auto;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-top: 3px solid var(--red); border-radius: var(--radius);
+  animation: fadeUp 0.3s var(--ease);
+}
+.modal__dialog:focus { outline: none; }
+.modal__head { display: flex; justify-content: space-between; align-items: start; gap: 1rem; padding: 1.5rem 1.5rem 0; }
+.modal__title { font-size: 1.6rem; }
+.modal__close { flex: 0 0 auto; width: 40px; height: 40px; background: none; border: 1px solid var(--line-strong); border-radius: 3px; font-size: 1.2rem; line-height: 1; }
+.modal__close:hover { border-color: var(--red); color: var(--red); }
+.modal__body { padding: 1.25rem 1.5rem 1.5rem; display: grid; gap: 1.1rem; }
+.modal__foot { display: flex; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; padding-top: 0.5rem; }
+
+.stepper { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; padding: 1rem 1.5rem 0; }
+.stepper__item { padding-top: 0.5rem; border-top: 3px solid var(--line-strong); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.stepper__item.is-done { border-top-color: var(--ok); color: var(--ok); }
+.stepper__item.is-current { border-top-color: var(--red); color: var(--text); }
+@media (max-width: 520px) { .stepper__item span { display: none; } }
+
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem 1rem; }
+@media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+.player { padding: 0.9rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); display: grid; gap: 0.6rem; }
+.player__title { font-family: var(--font-head); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; }
+.player__fields { display: grid; grid-template-columns: 1.6fr 0.6fr 1fr; gap: 0.75rem; }
+@media (max-width: 640px) { .player__fields { grid-template-columns: 1fr 1fr; } .player__fields .field:first-child { grid-column: 1 / -1; } }
+.summary { display: grid; gap: 0.4rem; padding: 1rem; background: var(--surface-2); border: 1px solid var(--line); }
+.summary__row { display: flex; justify-content: space-between; gap: 1rem; }
+.summary__row--total { border-top: 1px solid var(--line-strong); padding-top: 0.6rem; margin-top: 0.3rem; font-weight: 700; font-size: 1.15rem; }
+.pay-options { display: grid; gap: 0.6rem; }
+.pay-option { display: flex; align-items: center; gap: 0.8rem; padding: 0.9rem 1rem; border: 1px solid var(--line-strong); border-radius: var(--radius); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.pay-option:has(input:checked) { border-color: var(--cyan); background: rgba(0, 229, 255, 0.07); }
+.pay-option input { accent-color: var(--cyan); width: 18px; height: 18px; }
+.pay-option small { display: block; color: var(--muted); }
+.success { text-align: center; display: grid; gap: 1rem; justify-items: center; }
+.reg-code { font-family: var(--font-mono); font-size: clamp(1.3rem, 4vw, 2rem); font-weight: 700; color: var(--gold); letter-spacing: 0.1em; padding: 0.6rem 1.2rem; border: 1px dashed rgba(245, 158, 11, 0.6); }
+.qr { width: 200px; padding: 12px; background: #fff; clip-path: var(--cut-sm); }
+.qr svg { width: 100%; height: auto; }
+.form-error { padding: 0.7rem 0.9rem; border-left: 3px solid var(--red); background: rgba(255, 70, 85, 0.1); font-size: 0.9rem; }

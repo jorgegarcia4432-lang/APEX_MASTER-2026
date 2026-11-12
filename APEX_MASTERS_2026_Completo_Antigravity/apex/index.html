@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APEX MASTERS 2026: Challenger Championship · VALORANT</title>
+  <meta name="description" content="Portal oficial del torneo regional de VALORANT APEX MASTERS 2026. 14 y 15 de noviembre. 32 equipos, $5,000 USD en premios, final presencial en Arena eSports Nexus." />
+  <meta name="theme-color" content="#090D16" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090D16'/%3E%3Cpath d='M16 4 28 28h-6l-6-13-6 13H4z' fill='%23FF4655'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="#inicio" aria-label="APEX MASTERS 2026, inicio">
+        <span>APEX <b>MASTERS</b> 2026</span>
+        <span class="badge badge--red">VALORANT 5v5</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      <nav class="nav-links" id="nav-links" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#formato">Formato</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#reglamento">Reglamento</a>
+        <a href="#arena">Arena &amp; Tech</a>
+        <a href="#premios">Premios</a>
+        <a href="#sponsors">Sponsors</a>
+        <button class="btn btn--sm nav-cta" data-action="register">Inscribir equipo ($50 USD)</button>
+      </nav>
+      <span class="badge status-pill" id="status-pill" role="status">REGISTRO ABIERTO</span>
+      <button class="btn btn--sm btn--nav" data-action="register">Inscribir equipo ($50 USD)</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <span class="hero__tag">14 - 15 NOVIEMBRE 2026 • HÍBRIDO: ONLINE + ARENA ESPORTS NEXUS</span>
+        <h1 class="hero__title" id="hero-title">APEX MASTERS 2026<span>CHALLENGER CHAMPIONSHIP</span></h1>
+        <p class="hero__sub">El torneo regional de VALORANT con estándares Tier-1. 32 escuadras, $5,000 USD en premios y gloria presencial en Arena LAN.</p>
+        <div class="hero__actions">
+          <button class="btn" data-action="register">Registrar Escuadra</button>
+          <button class="btn btn--ghost" data-action="download-rules">Descargar Reglamento Oficial</button>
+        </div>
+        <div class="countdown" id="countdown" role="timer" aria-live="off" aria-label="Cuenta regresiva al inicio del torneo"></div>
+        <p class="countdown-caption mono">INICIO: SÁB 14 NOV 2026 · 09:00:00 EST (UTC-5)</p>
+        <div class="kpis" id="kpis"></div>
+      </div>
+    </section>
+
+    <!-- FORMATO -->
+    <section class="section" id="formato" aria-labelledby="formato-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 01 · Competencia</p>
+          <h2 class="section__title" id="formato-title">Formato y llaves</h2>
+          <p class="section__lead">Tres fases hacia la Gran Final. Explora los grupos GSL, el cuadro de playoffs y los criterios de desempate.</p>
+        </div>
+        <div id="format-mount"></div>
+      </div>
+    </section>
+
+    <!-- CRONOGRAMA -->
+    <section class="section section--alt" id="cronograma" aria-labelledby="crono-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 02 · Agenda</p>
+          <h2 class="section__title" id="crono-title">Cronograma</h2>
+          <p class="section__lead">Dos jornadas, un campeón. Todos los horarios en EST (UTC-5).</p>
+        </div>
+        <div id="schedule-mount"></div>
+      </div>
+    </section>
+
+    <!-- REGLAMENTO -->
+    <section class="section" id="reglamento" aria-labelledby="reg-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 03 · Fair Play</p>
+          <h2 class="section__title" id="reg-title">Reglamento y sanciones</h2>
+          <p class="section__lead">Requisitos de jugador, hardware permitido, protocolos de contingencia y la escala de sanciones.</p>
+        </div>
+        <div id="rules-mount"></div>
+      </div>
+    </section>
+
+    <!-- ARENA -->
+    <section class="section section--alt blueprint" id="arena" aria-labelledby="arena-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 04 · Infraestructura</p>
+          <h2 class="section__title" id="arena-title">Arena &amp; Tech</h2>
+          <p class="section__lead">Hardware de competencia, red segmentada por VLAN y la distribución del recinto Arena eSports Nexus.</p>
+        </div>
+        <div id="arena-mount"></div>
+      </div>
+    </section>
+
+    <!-- PREMIOS -->
+    <section class="section" id="premios" aria-labelledby="premios-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 05 · Recompensas</p>
+          <h2 class="section__title" id="premios-title">Bolsa de premios</h2>
+          <p class="section__lead">$5,000 USD repartidos entre los cuatro mejores equipos, más el premio al MVP de la Final.</p>
+        </div>
+        <div id="prizes-mount"></div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section class="section section--alt" id="sponsors" aria-labelledby="sponsors-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 06 · Alianzas</p>
+          <h2 class="section__title" id="sponsors-title">Patrocinadores</h2>
+          <p class="section__lead">Tres niveles de patrocinio con visibilidad en el stream y en la Arena.</p>
+        </div>
+        <div id="sponsors-mount"></div>
+      </div>
+    </section>
+
+    <!-- COMITÉ -->
+    <section class="section" id="comite" aria-labelledby="comite-title">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__kicker">// 07 · Organización</p>
+          <h2 class="section__title" id="comite-title">Comité organizador</h2>
+        </div>
+        <div id="committee-mount"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="logo"><span>APEX <b>MASTERS</b> 2026</span></p>
+          <p class="muted" style="margin-top:.6rem" id="credits"></p>
+        </div>
+        <nav class="footer__links" id="footer-links" aria-label="Enlaces oficiales"></nav>
+      </div>
+      <p class="footer__legal">VALORANT es una marca registrada de Riot Games, Inc. APEX MASTERS 2026 es un torneo independiente, no afiliado ni respaldado por Riot Games.</p>
+    </div>
+  </footer>
+
+  <noscript><p style="padding:2rem;text-align:center">Este portal requiere JavaScript para mostrar el cronograma, los brackets y la inscripción.</p></noscript>
+
+  <!-- Núcleo -->
+  <script src="js/vendor/qrcode.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/ui.js"></script>
+  <!-- Lógica de dominio -->
+  <script src="js/gsl.js"></script>
+  <script src="js/validators.js"></script>
+  <!-- Secciones -->
+  <script src="js/countdown.js"></script>
+  <script src="js/bracket.js"></script>
+  <script src="js/schedule.js"></script>
+  <script src="js/rules.js"></script>
+  <script src="js/arena.js"></script>
+  <script src="js/prizes.js"></script>
+  <script src="js/sponsors.js"></script>
+  <script src="js/committee.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
